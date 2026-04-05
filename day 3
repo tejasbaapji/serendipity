@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>For You red</title>
+    <style>
+        body { font-size:30px;
+            background-color: #0d0d0d;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 { font-size: 40px; }
+        h2 { color: #ff4d6d; }
+        p { font-size: 18px; line-height: 1.6; }
+        .date { margin-top: 30px; color: #aaa; }
+        a {
+            display: block;
+            margin-top: 40px;
+            color: #ff4d6d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <h1>letter 3</h1>
+
+    <h2>For you red, I'd say...</h2>
+
+    <p>
+    by loving her , i gave her the power to destroy me<br>
+      and knew she won't 
+    </p>
+
+    <div class="date"></div>
+
+
+    <a id="nextLink">Next →</a>
+
+   <script>
+    let text = document.querySelector("h1").innerText;
+    let number = parseInt(text.match(/\d+/)); // finds any number
+    let next = number + 1;
+
+    document.getElementById("nextLink").href = "day" + next + ".html";
+</script>
+    
+</body>
+</html>
