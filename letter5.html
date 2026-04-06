@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #770606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+.paper {
+    width: 650px;
+    padding: 60px; 
+    background: #c2a178;
+    color: #2b1d0e;
+    border-radius: 8px;
+
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(0,0,0,0.15), transparent 60%);
+
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease forwards;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: normal;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+p {
+    font-size: 22px;   
+    line-height: 1.9;
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #2b1d0e;
+    border-bottom: 1px solid #2b1d0e;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="paper">
+
+<h1>Letter 5</h1>
+
+<h2>To my dearest,her......</h2>
+
+<p>
+I’m not poetry,<BR>
+I’m broken lines and messy thoughts,<BR>
+But somehow…<br>
+You read me like I made sense.<br>
+
+And in a world full of almosts,<br>
+Half-loves, and maybes,<br>
+You chose me—<br>
+Like I was something certain.<br>
+</p>
+
+<a id="nextLink">Next →</a>
+
+</div>
+
+<script>
+let text = document.querySelector("h1").innerText;
+let number = parseInt(text.match(/\d+/));
+let next = number + 1;
+
+document.getElementById("nextLink").href = "letter" + next + ".html";
+</script>
+
+</body>
+</html>
